@@ -1,0 +1,26 @@
+{
+  "name": "multibrowse",
+  "version": "1.0.0",
+  "description": "Search extension",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManuColo/multiBrowse.git"
+  },
+  "author": "mcolombini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManuColo/multiBrowse/issues"
+  },
+  "homepage": "https://github.com/ManuColo/multiBrowse#readme",
+  "dependencies": {
+    "webextension-polyfill": "^0.2.1"
+  }
+}

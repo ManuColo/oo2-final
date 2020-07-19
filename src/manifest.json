@@ -1,0 +1,40 @@
+{
+	"manifest_version": 2,
+	"name": "MultiSearch",
+	"version": "0.1",
+	"author": "Manuel Colombini",
+	"description": "Busca en multiples buscadores",
+
+	"browser_action": {
+		"default_icon": {
+			"64": "resources/icon64.png"
+		},
+		"default_title": "MultiSearch"
+	},
+
+	"content_scripts": [{
+		"matches": ["https://*.google.com/search*", "https://*.bing.com/search*", "https://duckduckgo.com/?q*"],
+        "run_at": "document_end",
+		"js": [
+          "node_modules/webextension-polyfill/dist/browser-polyfill.js",
+          "content_scripts/main.js"
+        ]
+	}],
+
+	"background": {
+		"scripts": [
+			"background_scripts/main.js"
+		]
+	},
+
+	"icons": {
+    	"16": "resources/icon16.png",
+     	"32": "resources/icon32.png",
+     	"64": "resources/icon64.png"
+	},
+
+	"permissions": [
+	    "tabs",
+	    "storage"
+	]
+}
